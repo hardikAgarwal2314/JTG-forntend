@@ -1,0 +1,40 @@
+html {
+  background: #222;
+}
+
+.dialog-box_info, .dialog-box_error, .dialog-box_success, .dialog-box_warning {
+  border-radius: 1em;
+  color: #fafafa;
+  margin: 5% auto;
+  padding: 2em;
+  position: relative;
+  width: 80%;
+  height: 45vh;
+}
+.dialog-box_info:before, .dialog-box_error:before, .dialog-box_success:before, .dialog-box_warning:before {
+  background: #222;
+  content: attr(data-title);
+  left: 50%;
+  padding: 0 1em;
+  position: absolute;
+  text-transform: uppercase;
+  top: -0.6em;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.dialog-box_info {
+  border: 0.2em solid #37ddfd;
+  box-shadow: inset 0 0 0.4em #05d5fc, 0 0 0.4em #05d5fc;
+}
+.dialog-box_info:before {
+  border-left: 0.2em solid #37ddfd;
+  border-right: 0.2em solid #37ddfd;
+  color: #9ceefe;
+  text-shadow: 0 0 0.4em #05d5fc;
+}
+.dialog-box_info em {
+  color: #9ceefe;
+}
+
+
