@@ -9,7 +9,8 @@ import {AboutUsComponent} from './about-us/about-us.component';
 export const routers: Routes = [
   {
     path: '',
-    component: HomeComponent
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
   {
     path: 'home',
