@@ -8,15 +8,17 @@ phases:
     - echo Installing source NPM dependencies...
     - npm install
     - echo Build started on `date`
-    -ng build --prod --configuration=${BUILD_ENV}
+    - cp -R ./node_modules/webpack-dev-server ./node_modules/@angular/cli/node_modules/
+      -ng build --prod --configuration=${BUILD_ENV}
   post_build:
     commands:
-    - aws s3 cp dist s3://{S3_BUCKET} --recursive
-    -aws configure set preview.cloudfront true
-    -echo ${CLOUDFRONT_DISTRIBUTION_ID}
-    -echo ${BUILD_ENV}
-    -echo ${S3_BUCKET}
-    -aws cloudfront create-invaildation --distribution_id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
+    - aws s3 cp dist s3://${S3_BUCKET} --recursive
+    - aws configure set preview.cloudfront true
+    - echo ${CLOUDFRONT_DISTRIBUTION_ID}
+    - echo ${BUILD_ENV}
+    - echo ${S3_BUCKET}
+    - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
+    - echo Build completed on `date`
 artifacts:
   files:
   - '**/*'
