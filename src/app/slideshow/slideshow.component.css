@@ -91,15 +91,15 @@ http://stackoverflow.com/a/34696029/383904
   transition: 0.3s;
 }
 .CSSgal .bullets > a+a {
-  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+  background: rgba(255, 255, 255, 1); /* Dim all but first */
 }
 .CSSgal .bullets > a:hover {
-  background: rgba(255, 255, 255, 0.7) !important;
+  background: rgba(255, 255, 255, 1) !important;
 }
 
 /* NAVIGATION BUTTONS */
 /* ALL: */
-.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 1);}
 /* ACTIVE */
 #s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
 #s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}

@@ -1,3 +1,4 @@
-<div>
-<app-slideshow></app-slideshow>
+<div (click)="$event.stopPropagation();">
+<app-slideshow (click)="$event.stopPropagation();"></app-slideshow>
 </div>
+
