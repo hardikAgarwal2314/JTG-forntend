@@ -1,0 +1,24 @@
+.footer {
+  background-image: url("../../assets/Jpics/footer_bg.jpg");
+}
+
+.color-white {
+  color: lightgray;
+  padding: 0px 20px 30px 5px;
+  font-size: 16px;
+}
+
+.partdiv {
+  width: 15%;
+}
+
+.ulcss {
+  color: grey;
+  margin: 20px 0px;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mrgn{
+  margin: 20px 0px;
+}
